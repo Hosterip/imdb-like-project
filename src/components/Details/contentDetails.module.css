@@ -1,0 +1,19 @@
+.contentDetails {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width:70%;
+  min-height:100vh;
+  background: #142d4c;
+  color: #ececec;
+  line-height: 40px;
+
+}
+.poster {
+    width: 400px;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    position: relative;
+}

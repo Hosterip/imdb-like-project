@@ -1,0 +1,21 @@
+.sideMenu {
+    width: 50rem;
+    background: #001529;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 5px;
+    color: #a4a4a4;
+    background: transparent;
+    border: none
+}
+
+.btn.active {
+    color: #ffecec;
+    background: #3689d1;
+}
