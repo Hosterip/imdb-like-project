@@ -7,10 +7,10 @@ import styles from './content.module.css'
 
 interface IContentList {
     results: IResults[]
-    total_pages: number
+    total_results: number
 }
 
-const ContentList: FC<IContentList> = ({results, total_pages}) => {
+const ContentList: FC<IContentList> = ({results, total_results}) => {
     const navigate = useNavigate()
     const {page} = useParams()
 
@@ -27,7 +27,7 @@ const ContentList: FC<IContentList> = ({results, total_pages}) => {
                         </Link>
                     ))}
                 </div>
-                <Pagination showQuickJumper current={page ? +page : 1} total={total_pages * 10} onChange={onChange}/>
+                <Pagination showQuickJumper current={page ? +page : 1} pageSize={20} total={total_results} onChange={onChange}/>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const SearchResults = () => {
             {content
                 ?
                 <div style={{display: 'flex'}}>
-                    <ContentList results={content.results} total_pages={content.total_pages}/>
+                    <ContentList results={content.results} total_results={content.total_results}/>
                 </div>
                 :
                 <LoadingErrorHandler error={error} loading={loading}/>
