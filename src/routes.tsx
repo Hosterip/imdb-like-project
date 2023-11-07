@@ -1,12 +1,11 @@
-import React, {ReactNode} from "react";
+import {ReactNode} from "react";
 import About from "./pages/About.tsx";
 import Recommendation from "./pages/Recommendation.tsx";
-import Search from "./pages/Search.tsx";
 import {Navigate} from "react-router-dom";
 import SearchResults from "./pages/SearchResults.tsx";
 import Detail from "./pages/Detail.tsx";
 
-export interface RouteInterface {
+interface RouteInterface {
     element: ReactNode,
     path: string
 }

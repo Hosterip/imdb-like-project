@@ -2,13 +2,14 @@ import {FC} from 'react';
 import { fallbackImage } from '../../constants/images';
 import { detailsInterface } from '../../pages/Detail';
 import styles from './contentDetails.module.css'
+import {defaultImagePath} from "../../constants/paths.ts";
 interface IDetailProps {
     details: detailsInterface
 }
 
 
 const ContentDetails: FC<IDetailProps> = ({details}) => {
-    const imagePath = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : fallbackImage
+    const imagePath = details.poster_path ? defaultImagePath + details.poster_path : fallbackImage
     const genresGenerator = () => details.genres.map(item => item.name).join(', ')
 
     return (

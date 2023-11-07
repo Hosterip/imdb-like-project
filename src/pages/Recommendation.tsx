@@ -1,9 +1,8 @@
-import {FC, useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {FC} from "react";
 import RecSideMenu from "../components/RecSidemenu/RecSideMenu.tsx";
-import {fetchContent} from "../API/fetchContent.ts";
 import ContentList from "../components/ContentList/ContentList.tsx";
-import LoadingErrorHandler, {IError} from "../components/Loading/LoadingErrorHandler.tsx";
+import LoadingErrorHandler  from "../components/Loading/LoadingErrorHandler.tsx";
+import useFetchContent from "../hooks/useFetchContent.ts";
 
 export interface IResults {
     adult: boolean,
@@ -30,26 +29,7 @@ export interface IContent {
 }
 
 const Recommendation: FC = () => {
-    const [content, setContent] = useState<IContent | undefined>()
-    const [error, setError] = useState<IError>({name: 'Recommendation Error', isError: false})
-    const [loading, setLoading] = useState<boolean>(true)
-    const [type, setType] = useState('all')
-    const {page} = useParams()
-
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await fetchContent('trending', type, page)
-            if (data?.results) {
-                setContent(data)
-                setLoading(false)
-            } else {
-                setLoading(false)
-                setError({...error, isError: true})
-            }
-        }
-        fetchData()
-    }, [page, type])
+   const {content, type, setType, error, loading} = useFetchContent()
 
     return (
         <>

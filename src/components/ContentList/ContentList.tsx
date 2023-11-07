@@ -5,12 +5,12 @@ import {IResults} from "../../pages/Recommendation.tsx";
 import ContentCard from "./ContentCard.tsx";
 import styles from './content.module.css'
 
-interface ContentListInterface {
+interface IContentList {
     results: IResults[]
     total_pages: number
 }
 
-const ContentList: FC<ContentListInterface> = ({results, total_pages}) => {
+const ContentList: FC<IContentList> = ({results, total_pages}) => {
     const navigate = useNavigate()
     const {page} = useParams()
 
