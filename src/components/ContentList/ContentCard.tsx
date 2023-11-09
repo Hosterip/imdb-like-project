@@ -13,25 +13,20 @@ interface ContentCardInterface {
 const ContentCard: FC<ContentCardInterface> = ({item}) => {
     const imagePath = item.poster_path ? defaultImagePath + item.poster_path : fallbackImage
     return (
-        <Card
-            hoverable
-            style={{width: 240}}
-            cover={
-                <img
-                    alt={item.title ?? item.name}
-                    src={imagePath}
-                />
-            }
-        >
-            <Meta title={item.title ?? item.name}
-                  description={
-                      <div className={styles.detailsOfMovie}>
-                          <span>{(item.release_date ?? item.first_air_date) + " | " + firstLetterCapital(item.media_type)}</span>
-                          <span className={styles.rating}>{item.vote_average.toFixed(1)}</span>
-                      </div>
-                  }
+        <div className={styles.card}>
+            <img
+                className={styles.img}
+                alt={'poster'}
+                src={imagePath}
             />
-        </Card>
+            <div className={styles.cardContent}>
+                <h2 className={styles.cutText}>{item.title ?? item.name}</h2>
+                <div className={styles.detailsOfMovie}>
+                    <span>{(item.release_date ?? item.first_air_date) + " | " + firstLetterCapital(item.media_type)}</span>
+                    <span className={styles.rating}>{item.vote_average.toFixed(1)}</span>
+                </div>
+            </div>
+        </div>
     );
 };
 
