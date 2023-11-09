@@ -1,5 +1,6 @@
 import { ICardContent } from "../shared/interfaces/cardContentInterfaces.ts";
 import {options} from "./options.ts";
+import {defaultAPIPath} from "../shared/constants/paths.ts";
 
 export const fetchContent = async (
     which: 'trending' | 'search',
@@ -15,7 +16,7 @@ export const fetchContent = async (
         which === "trending"
         ? `/week?page=${page}`
         : `?query=${query}&page=${page}`
-    await fetch(`https://api.themoviedb.org/3/${which}/${type}${link}`, options)
+    await fetch(`${defaultAPIPath}${which}/${type}${link}`, options)
         .then(response => response.json())
         .then((response: ICardContent) => data = response)
         .catch(e => {
