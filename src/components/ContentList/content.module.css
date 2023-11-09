@@ -1,14 +1,8 @@
-/*{display: "flex", gap: '10px', flexWrap: "wrap", justifyContent: 'center', margin: '15px 0 15px 0'}*/
-
-.loadingForImage {
-    height: 360px;
-    width: 240px;
-}
-
 .detailsOfMovie {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #747474
 }
 
 .rating {
@@ -20,12 +14,11 @@
     background: #3689d1;
 }
 
-/*display: "flex", gap: '10px', flexWrap: "wrap", justifyContent: 'center', margin: '15px 0 15px 0'*/
 .contentListItems {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin: 15px 0 15px;
+    margin: 15px 5px ;
     flex-wrap: wrap;
 }
 
@@ -33,4 +26,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    width: 240px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.48);
+    transition: box-shadow 0.3s
+}
+
+.cardContent {
+    margin: 5px;
+}
+.cardContent h2 {
+    text-overflow: ellipsis;
+    font-size: 20px;
+    color: black;
+    overflow: hidden;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.img{
+    height: 80%;
+    background-position: center;
 }
