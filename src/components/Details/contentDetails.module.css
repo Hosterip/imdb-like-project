@@ -1,19 +1,30 @@
 .contentDetails {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   padding: 15px;
-  width:70%;
-  min-height:100vh;
+  max-width: 80%;
+  min-height: 100vh;
   background: #142d4c;
   color: #ececec;
   line-height: 40px;
-
 }
 .poster {
-    width: 400px;
-    height: 600px;
-    background-size: cover;
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    position: relative;
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.contentDetailsItem {
+  min-width: 500px;
+  margin: 0 20px;
+  flex: 0 1;
+}
+
+.overview {
+  height: 250px;
+  overflow: auto;
 }
