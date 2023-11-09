@@ -1,10 +1,10 @@
 import {FC} from 'react';
-import { fallbackImage } from '../../constants/images';
-import { detailsInterface } from '../../pages/Detail';
+import { fallbackImage } from '../../shared/constants/images';
 import styles from './contentDetails.module.css'
-import {defaultImagePath} from "../../constants/paths.ts";
+import {defaultImagePath} from "../../shared/constants/paths.ts";
+import { IDetails } from '../../shared/interfaces/pageContentInterfaces.ts';
 interface IDetailProps {
-    details: detailsInterface
+    details: IDetails
 }
 
 

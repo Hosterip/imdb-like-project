@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import {Pagination, PaginationProps} from "antd";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import {IResults} from "../../pages/Recommendation.tsx";
+import {IResults} from "../../shared/interfaces/cardContentInterfaces.ts";
 import ContentCard from "./ContentCard.tsx";
 import styles from './content.module.css'
 

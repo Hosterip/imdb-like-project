@@ -1,7 +1,7 @@
 import {options} from "./options.ts";
-import {detailsInterface} from "../pages/Detail.tsx";
+import {IDetails} from "../shared/interfaces/pageContentInterfaces.ts";
 
-export const fetchData = async (type: string, id: string): Promise<detailsInterface | undefined>  => {
+export const fetchData = async (type: string, id: string): Promise<IDetails | undefined>  => {
     if(!type || !id) {
         return
     }

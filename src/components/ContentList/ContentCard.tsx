@@ -1,11 +1,9 @@
 import {FC} from 'react';
-import {Card} from "antd";
-import {IResults} from "../../pages/Recommendation.tsx";
 import {firstLetterCapital} from "../../helpers/firstLetterCapital.ts";
-import { fallbackImage } from '../../constants/images.ts';
+import { fallbackImage } from '../../shared/constants/images.ts';
 import styles from './content.module.css'
-import {defaultImagePath} from "../../constants/paths.ts";
-const {Meta} = Card;
+import {defaultImagePath} from "../../shared/constants/paths.ts";
+import {IResults} from "../../shared/interfaces/cardContentInterfaces.ts";
 
 interface ContentCardInterface {
     item: IResults

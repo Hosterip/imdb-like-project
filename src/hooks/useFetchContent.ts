@@ -1,15 +1,15 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {IContent, IResults} from "../pages/Recommendation.tsx";
 import {IError} from "../components/Loading/LoadingErrorHandler.tsx";
 import {fetchContent} from "../API/fetchContent.ts";
+import {ICardContent, IResults} from "../shared/interfaces/cardContentInterfaces.ts";
 
 type whichType = 'search' | 'trending'
 
 const useFetchContent = () => {
     const {query, page} = useParams()
     const [type, setType] = useState('all')
-    const [content, setContent] = useState<IContent | undefined>()
+    const [content, setContent] = useState<ICardContent | undefined>()
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<IError>({
         name: query ? 'No results were found' : 'Error have occurred',

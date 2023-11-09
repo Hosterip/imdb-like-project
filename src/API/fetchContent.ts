@@ -1,12 +1,12 @@
+import { ICardContent } from "../shared/interfaces/cardContentInterfaces.ts";
 import {options} from "./options.ts";
-import {IContent} from "../pages/Recommendation.tsx";
 
 export const fetchContent = async (
     which: 'trending' | 'search',
     type: string,
     page: string | undefined,
     query?:string,
-): Promise<IContent | undefined> => {
+): Promise<ICardContent | undefined> => {
     if(!type || !page) {
         return
     }
@@ -17,7 +17,7 @@ export const fetchContent = async (
         : `?query=${query}&page=${page}`
     await fetch(`https://api.themoviedb.org/3/${which}/${type}${link}`, options)
         .then(response => response.json())
-        .then((response: IContent) => data = response)
+        .then((response: ICardContent) => data = response)
         .catch(e => {
             console.error('Error:', e)
         })
