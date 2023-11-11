@@ -1,13 +1,13 @@
-import {JSX} from "react";
+import { JSX } from 'react'
 
 export interface RecSideMenuItemsInterface {
-    key: string,
-    value: string
-    icon: JSX.Element
+  key: string
+  value: string
+  icon: JSX.Element
 }
 
 export interface RecSideMenuButtonProps {
-    item: RecSideMenuItemsInterface[]
-    type: string,
-    setState: () => void
+  item: RecSideMenuItemsInterface
+  type: string
+  setState: (n: string) => void
 }
