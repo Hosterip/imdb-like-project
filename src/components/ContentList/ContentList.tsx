@@ -2,7 +2,7 @@ import {FC} from 'react';
 import {Pagination, PaginationProps} from "antd";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {IResults} from "../../shared/interfaces/cardContentInterfaces.ts";
-import ContentCard from "./ContentCard.tsx";
+import {ContentCard} from "./ContentCard.tsx";
 import styles from './content.module.css'
 
 interface IContentList {
@@ -10,7 +10,7 @@ interface IContentList {
     total_results: number
 }
 
-const ContentList: FC<IContentList> = ({results, total_results}) => {
+export const ContentList: FC<IContentList> = ({results, total_results}) => {
     const navigate = useNavigate()
     const {page} = useParams()
 
@@ -32,4 +32,3 @@ const ContentList: FC<IContentList> = ({results, total_results}) => {
     );
 };
 
-export default ContentList;

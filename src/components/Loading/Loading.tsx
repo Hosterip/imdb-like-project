@@ -1,6 +1,6 @@
 import {Spin} from "antd";
 import styles from './loading.module.css'
-const Loading = () => {
+export const Loading = () => {
     return (
         <div className={styles.loading}>
             <Spin size="large" />
@@ -8,4 +8,3 @@ const Loading = () => {
     );
 };
 
-export default Loading;

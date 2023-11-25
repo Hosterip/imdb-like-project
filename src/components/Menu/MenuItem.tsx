@@ -4,8 +4,7 @@ import {firstLetterCapital} from "../../helpers/firstLetterCapital.ts";
 import {MenuItemProps} from "./MenuTypes.ts";
 import styles from './Menu.module.css'
 
-
-const MenuItem:FC<MenuItemProps>= React.memo(({item, location}) => {
+export const MenuItem:FC<MenuItemProps>= React.memo(({item, location}) => {
     const classesHandler = () => {
         return `${styles.menuButton} ${location === item.key && styles.active}`
     }
@@ -19,4 +18,3 @@ const MenuItem:FC<MenuItemProps>= React.memo(({item, location}) => {
     );
 })
 
-export default MenuItem;

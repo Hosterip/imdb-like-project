@@ -2,7 +2,7 @@ import { FC } from 'react'
 import styles from './RecSidemenu.module.css'
 import { RecSideMenuButtonProps } from './RecSidemenuTypes.ts'
 
-const RecSideMenuButton: FC<RecSideMenuButtonProps> = ({
+export const RecSideMenuButton: FC<RecSideMenuButtonProps> = ({
   item,
   type,
   setState,
@@ -20,5 +20,3 @@ const RecSideMenuButton: FC<RecSideMenuButtonProps> = ({
     </button>
   )
 }
-
-export default RecSideMenuButton

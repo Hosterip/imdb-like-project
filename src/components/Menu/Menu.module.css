@@ -1,6 +1,5 @@
 .menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 50px;
     background: #001529;
@@ -22,33 +21,3 @@
     border-bottom: medium solid #3689d1;
 }
 
-.search {
-    width: 100%;
-    display: flex;
-    border-radius: 5px;
-    overflow: hidden;
-    color: #001529;
-}
-
-.searchBtn {
-    font-size: 14px;
-    letter-spacing: 0.7px;
-    font-weight: 550;
-    background: #008eff;
-    color: #4a4a4a;
-    width: 20%;
-    padding: 10px 0 10px 10px;
-    border: none;
-}
-
-.searchInput {
-    width: 80%;
-    border: none;
-    padding: 0 5px;
-}
-
-.searchInput:focus {
-    border-style: solid;
-    border-color: #3689d1;
-    border-width: 2px 0 2px 2px;
-}

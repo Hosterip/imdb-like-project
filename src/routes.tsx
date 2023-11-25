@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 import About from "./pages/About.tsx";
-import Recommendation from "./pages/Recommendation.tsx";
+import Recommendation from "./pages/Recommendation/Recommendation.tsx";
 import {Navigate} from "react-router-dom";
 import SearchResults from "./pages/SearchResults.tsx";
 import Detail from "./pages/Detail.tsx";

@@ -1,6 +1,6 @@
-import ContentDetails from '../components/Details/ContentDetails.tsx'
-import LoadingErrorHandler from '../components/Loading/LoadingErrorHandler.tsx'
 import useFetchDetails from '../hooks/useFetchDetails.ts'
+import ContentDetails from "../components/Details/ContentDetails.tsx";
+import LoadingErrorHandler from "../components/Loading";
 
 const Detail = () => {
   const { details, loading, error } = useFetchDetails()

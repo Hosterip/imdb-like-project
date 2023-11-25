@@ -8,7 +8,7 @@ import {IResults} from "../../shared/interfaces/cardContentInterfaces.ts";
 interface ContentCardInterface {
     item: IResults
 }
-const ContentCard: FC<ContentCardInterface> = ({item}) => {
+export const ContentCard: FC<ContentCardInterface> = ({item}) => {
     const imagePath = item.poster_path ? defaultImagePath + item.poster_path : fallbackImage
     return (
         <div className={styles.card}>
@@ -28,4 +28,3 @@ const ContentCard: FC<ContentCardInterface> = ({item}) => {
     );
 };
 
-export default ContentCard;

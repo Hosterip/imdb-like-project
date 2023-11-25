@@ -3,13 +3,20 @@
     background: #001529;
 }
 
+@media (max-width: 720px) {
+    .sideMenu {
+        width: 100%
+    }
+}
+
 .btn {
     font-size: 14px;
     font-weight: 500;
+    text-align: center;
     letter-spacing: 1px;
     width: 100%;
     padding: 10px 0;
-    margin: 10px 5px;
+    margin: 15px 0;
     color: #a4a4a4;
     background: transparent;
     border: none

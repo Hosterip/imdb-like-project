@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import {routes} from "./routes.tsx";
-import Menu from "./components/Menu/Menu.tsx";
+import Menu from "./components/Menu";
 
 function App() {
   return (

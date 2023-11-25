@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import styles from './Menu.module.css'
-const MenuSearch = () => {
+import styles from './search.module.css'
+const Search = () => {
     const [value, setValue] = useState('')
     const navigate = useNavigate()
     const onChangeHandler = (e: React.FormEvent<HTMLInputElement>): void => {
@@ -34,4 +34,4 @@ const MenuSearch = () => {
     );
 };
 
-export default MenuSearch;
+export default Search;

@@ -1,5 +1,5 @@
-import Loading from "./Loading.tsx";
 import React, {FC} from "react";
+import {Loading} from "./Loading.tsx";
 
 export interface IError {
     name: string
@@ -10,7 +10,7 @@ interface ILoadingErrorHandler {
     loading: boolean
 }
 
-const LoadingErrorHandler: FC<ILoadingErrorHandler> = React.memo(({error, loading}) => {
+export const LoadingErrorHandler: FC<ILoadingErrorHandler> = React.memo(({error, loading}) => {
     return (
         <>
             {loading ? <Loading/> : (error.isError && <div>{error.name}</div>) }
@@ -18,4 +18,3 @@ const LoadingErrorHandler: FC<ILoadingErrorHandler> = React.memo(({error, loadin
     );
 })
 
-export default LoadingErrorHandler;

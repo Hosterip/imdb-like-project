@@ -1,6 +1,7 @@
-import ContentList from "../components/ContentList/ContentList.tsx";
-import LoadingErrorHandler from "../components/Loading/LoadingErrorHandler.tsx";
 import useFetchContent from "../hooks/useFetchContent.ts";
+import Search from "../components/Search/Search.tsx";
+import LoadingErrorHandler from "../components/Loading";
+import ContentList from "../components/ContentList";
 
 
 const SearchResults = () => {
@@ -10,7 +11,8 @@ const SearchResults = () => {
         <>
             {content
                 ?
-                <div style={{display: 'flex'}}>
+                <div style={{display: 'flex', flexDirection:'column'}}>
+                    <Search/>
                     <ContentList results={content.results} total_results={content.total_results}/>
                 </div>
                 :
