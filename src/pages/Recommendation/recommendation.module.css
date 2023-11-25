@@ -1,0 +1,10 @@
+.recommendation {
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width: 800px) {
+    .recommendation {
+        flex-direction: column;
+    }
+}

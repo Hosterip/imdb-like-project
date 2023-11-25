@@ -1,0 +1,28 @@
+.search {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    color: #001529;
+}
+
+.searchBtn {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    font-weight: 550;
+    background: #3689d1;
+    width: 20%;
+    padding: 10px 0 10px 10px;
+    border: none;
+}
+
+.searchInput {
+    width: 80%;
+    border: none;
+    padding: 0 5px;
+}
+
+.searchInput:focus {
+    border-style: solid;
+    border-color: #3689d1;
+    border-width: 0.5px;
+}
