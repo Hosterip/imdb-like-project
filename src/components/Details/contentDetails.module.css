@@ -3,28 +3,38 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 15px;
-  max-width: 60%;
-  min-height: 100vh;
+  width: 60%;
+  min-height: fit-content;
   background: #142d4c;
   color: #ececec;
   line-height: 40px;
 }
+
 .poster {
   width: 400px;
   height: 600px;
   background-size: cover;
-  background-position: 50% 0%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   position: relative;
 }
 
 .contentDetailsItem {
-  min-width: 500px;
+  min-width: 300px;
   margin: 0 20px;
   flex: 0 1;
 }
 
 .overview {
-  height: 250px;
-  overflow: auto;
+  min-height: fit-content;
+}
+
+@media(max-width: 890px) {
+  .contentDetails {
+    width: 100%;
+    align-items: center;
+  }
+  .contentDetailsItem {
+    flex: 1 1;
+  }
 }
