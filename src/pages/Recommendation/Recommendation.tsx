@@ -8,24 +8,18 @@ import LoadingErrorHandler from "../../components/Loading";
 
 const Recommendation: FC = () => {
     const {content, type, setType, error, loading} = useFetchContent()
-    console.log(content)
-    return (
-        <>
-            {content
-                ?
-                <div className={styles.recommendation}>
-                    <RecSideMenu type={type} setType={setType}/>
-                    <div>
-                        <Search/>
-                        <ContentList results={content.results} total_results={content.total_results}/>
-                    </div>
+    if (content)
+        return (
+            <div className={styles.recommendation}>
+                <RecSideMenu type={type} setType={setType}/>
+                <div>
+                    <Search/>
+                    <ContentList results={content.results} total_results={content.total_results}/>
                 </div>
-                :
-                <LoadingErrorHandler loading={loading} error={error}/>
-            }
-        </>
-
-
+            </div>
+        )
+    return (
+        <LoadingErrorHandler loading={loading} error={error}/>
     );
 };
 
