@@ -20,7 +20,7 @@
 }
 
 .contentDetailsItem {
-  min-width: 300px;
+  min-width: 50%;
   margin: 0 20px;
   flex: 0 1;
 }
