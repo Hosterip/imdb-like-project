@@ -16,7 +16,7 @@ export const fetchContent = async (
         which === "trending"
         ? `/week?page=${page}`
         : `?query=${query}&page=${page}`
-    await fetch(`${defaultAPIPath}${which}/${type}${link}`, options)
+    await fetch(`${defaultAPIPath}/${which}/${type}${link}`, options)
         .then(response => response.json())
         .then((response: ICardContent) => data = response)
         .catch(e => {
